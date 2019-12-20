@@ -6,6 +6,7 @@ import SideBar from '../common/template/sideBar'
 import Footer from '../common/template/footer'
 
 import Routes from './routes'
+import Message from '../common/msg/menssages'
 
 const app = (props) => {
     return (
@@ -16,6 +17,7 @@ const app = (props) => {
                 <Routes/>
             </div>
             <Footer/>
+            <Message/>
         </div>
     )
 }
