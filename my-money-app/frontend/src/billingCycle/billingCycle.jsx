@@ -9,8 +9,7 @@ import TabsHeader from '../common/tab/tabsHeader'
 import TabsContent from '../common/tab/tabsContent'
 import TabHeader from '../common/tab/tabHeader'
 import TabContent from '../common/tab/tabContent'
-import { selectTab, showTabs } from '../common/tab/tabActions'
-import { create, update, remove } from './billingCycleActions'
+import { create, update, remove, init } from './billingCycleActions'
 import { connect } from 'react-redux'
 
 import List from './billingCycleList'
@@ -18,8 +17,7 @@ import Form from './billingCycleForm'
 class BillinCycle extends Component {
     
     componentDidMount(){
-        this.props.selectTab('tabList')
-        this.props.showTabs('tabList', 'tabCreate')
+        this.props.init()
     }
 
     render(){
@@ -59,7 +57,7 @@ class BillinCycle extends Component {
 }
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-    selectTab, showTabs, create, update, remove
+    init, create, update, remove
 }, dispatch)
 
 export default connect(null, mapDispatchToProps)(BillinCycle)
