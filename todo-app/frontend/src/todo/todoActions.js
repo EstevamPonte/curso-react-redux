@@ -7,7 +7,7 @@ export const changeDescription = event => ({
     payload: event.target.value
 })
 
-export const search = description => {
+export const search = () => {
     return (dispatch, getState) => {
         const description = getState().todo.description
         const search =  description ? `&description__regex=/${description}/` : ''
